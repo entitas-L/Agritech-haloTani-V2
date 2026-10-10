@@ -1,29 +1,20 @@
-# 🌾 Agritech HaloTani V2
+# Agritech haloTani V2
 
-Versi kustom dari **Agritech HaloTani**. Proyek ini dibuat buat ngembangin antarmuka (UI/UX) baru yang lebih segar, perbaikan alur di panel petani, dan tetep mempertahankan integrasi backend `KiraAIService` buat diagnosa keluhan tanaman secara otomatis.
+Aplikasi manajemen dan asistensi sistem pertanian cerdas berbasis Laravel.
 
----
+## 🤖 AI Service Integration
 
-## 💡 Fitur Utama
+Sistem asistensi pertanian pada versi **V2** ini didesain secara dinamis dan fleksibel (*Provider-Agnostic AI Integration*).
 
-- 🤖 **Diagnosa Penyakit via Kira AI**: Panggil model `kira-mini-1.0` via Laravel HTTP Client buat dapet analisis penyakit & rekomendasi obat/tindakan secara otomatis.
-- 👨‍🌾 **Panel Petani (Filament v3)**: Tampilan kustom yang simpel dan gampang dipake sama petani buat kirim keluhan lahan.
-- 🔒 **Role Management**: Pemisahan akses antara akun Petani sama Admin.
+### Fitur AI Assistant:
+- **Primary / Fallback Provider**: Mendukung integrasi via **OpenRouter Gateway** (Nvidia Nemotron 3.5 Lightning / Google Gemini / Llama) serta **Kira AI Service**.
+- **Fitur Utama**: Analisis penyakit tanaman berdasarkan deskripsi keluhan petani dan estimasi wilayah lahan, lengkap dengan rekomendasi penanganan praktis.
 
----
+### Konfigurasi `.env`
 
-## 🛠️ Stack yang Dipakai
+Untuk mengaktifkan integrasi AI via OpenRouter:
 
-- **Framework**: Laravel 11 / 12
-- **Admin & User Panel**: Filament v3
-- **Database**: MySQL
-- **AI Integration**: Kira AI API (`kira-mini-1.0`)
-
----
-
-## 🚀 Cara Setup di Lokal
-
-1. **Clone repo & masuk ke folder:**
-   ```bash
-   git clone [https://github.com/entitas-L/Agritech-haloTani-V2.git](https://github.com/entitas-L/Agritech-haloTani-V2.git)
-   cd Agritech-haloTani-V2
+```env
+# OpenRouter / Multi-Model AI Gateway
+OPENROUTER_API_KEY=sk-or-v1-your-api-key-here
+OPENROUTER_MODEL=nvidia/nemotron-3.5-lightning:free
