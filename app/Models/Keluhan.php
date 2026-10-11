@@ -11,13 +11,19 @@ class Keluhan extends Model
     use HasUuids;
 
     public $timestamps = false;
-
     protected $table = 'keluhan';
     protected $primaryKey = 'id_keluhan';
     public $incrementing = false;
     protected $keyType = 'string';
 
-    protected $fillable = ['id_petani', 'teks_keluhan', 'tanggal', 'status'];
+    protected $fillable = [
+        'id_keluhan',
+        'id_petani',
+        'teks_keluhan',
+        'tanggal',
+        'status',
+        'hasil_analisis',
+    ];
 
     protected function casts(): array
     {

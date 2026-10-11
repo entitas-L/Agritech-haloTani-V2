@@ -47,6 +47,6 @@ return [
 
     'openrouter' => [
     'key'   => env('OPENROUTER_API_KEY'),
-    'model' => env('OPENROUTER_MODEL', 'nvidia/nemotron-3.5-lightning'),
+    'model' => env('OPENROUTER_MODEL', 'nvidia/nemotron-3-ultra-550b-a55b:free'),
     ],
 ];
