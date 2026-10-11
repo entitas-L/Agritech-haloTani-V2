@@ -30,4 +30,13 @@ class DiagnosaController extends Controller
             'keluhan' => $request->keluhan_petani,
         ]);
     }
+        public function hasil()
+    {
+        // Cek apakah ada data session dari proses diagnosa
+        if (!session()->has('hasil')) {
+            return redirect()->route('diagnosa.index');
+        }
+
+        return view('diagnosa.hasil');
+    }
 }
