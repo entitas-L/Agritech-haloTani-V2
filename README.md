@@ -9,7 +9,7 @@ A smart agricultural management and AI assistance system built with Laravel 11, 
 The AI assistance module in **Agritech V2** is built on a **Provider-Agnostic AI Integration** architecture designed for ultra-fast response times, high availability, and fault tolerance.
 
 ### AI Assistant Features:
-- **Primary High-Speed Provider**: Powered by **Cerebras Cloud API** utilizing high-performance models (`llama3.3-70b` / `llama3.1-8b`) for instant inference.
+- **Primary High-Speed Provider**: Powered by **Cerebras Cloud API** utilizing high-performance models (`llama3.3-70b` / `llama3.1-8b` / `gpt-oss-120b`) for instant inference.
 - **Fallback Gateway**: Supported by **OpenRouter Gateway** (Nvidia Nemotron 3.5 Lightning, Google Gemini, Qwen) to ensure zero downtime when rate limits or API outages occur.
 - **Agricultural Diagnostics**: Automated crop disease and pest diagnosis based on farmer complaint descriptions and field location context, delivering actionable treatment plans.
 
