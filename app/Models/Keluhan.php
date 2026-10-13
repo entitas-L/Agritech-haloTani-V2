@@ -20,6 +20,7 @@ class Keluhan extends Model
         'id_keluhan',
         'id_petani',
         'teks_keluhan',
+        'tingkat_urgensi',
         'tanggal',
         'status',
         'hasil_analisis',
